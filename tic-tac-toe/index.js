@@ -24,7 +24,8 @@ function checkWin(isEmpty, isEqual) {
     if (!isEmpty && isEqual) {
         let playerIndex = currentPlayer === 'cross' ? 0 : 1;
         let playerScore = parseInt(scoreElements[playerIndex].innerText);
-        scoreElements[playerIndex].innerText = playerScore + 1 clearFields(fields, game);
+        scoreElements[playerIndex].innerText = playerScore + 1;
+        clearFields(fields, game);
     }
 }
 
