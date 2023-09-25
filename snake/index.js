@@ -168,8 +168,8 @@ game.initGame();
 
 document.addEventListener('keydown', (event) => {
     if (KeyName.hasOwnProperty(event.key)) {
-        if (game.isStarted) {
-
+        if (!game.isStarted) {
+            game.start()
         } else {
             snake.changeDirection(DirectionMap[event.key]);
         }
